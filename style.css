@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+#addTaskBtn {
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+#addTaskBtn:hover {
+  background-color: #357ab8;
+}
+
+#msg {
+  text-align: center;
+  font-size: 14px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#taskList {
+  list-style: none;
+}
+
+.task-item {
+  background: #f2f2f2;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.task-item:hover {
+  background: #eaeaea;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 15px 20px;
+  }
+
+  #addTaskBtn {
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 350px) {
+  #taskInput {
+    font-size: 14px;
+  }
+}
+@media (max-width: 300px) {
+  #addTaskBtn {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 250px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+    margin-top: 5px;
+  }
+}
